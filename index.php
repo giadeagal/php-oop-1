@@ -22,7 +22,7 @@ class Movie {
         $this->collection = $_collection;
     }
 
-    public function setCollection(){
+    public function setCollection($release_year){
         if ($release_year < 2000) {
             $this->collection = "Classics";
         } else if ($release_year <= 2000 && $release_year < 2021){
