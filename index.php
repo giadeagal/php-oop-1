@@ -15,7 +15,7 @@ class Movie {
     public $distributed_by;
     public $collection;
 
-    function __construct($_title, $_directed_by, $_distributed_by, $_collection) {
+    function __construct($_title, $_directed_by, $_distributed_by) {
         $this->title = $_title;
         $this->directed_by = $_directed_by;
         $this->distributed_by = $_distributed_by;
