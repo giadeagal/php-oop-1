@@ -15,7 +15,7 @@ class Movie {
     public $distributed_by;
     public $collection;
 
-    function __construct(_$title, $_directed_by, $_distributed_by, $_collection) {
+    function __construct($_title, $_directed_by, $_distributed_by, $_collection) {
         $this->title = $_title;
         $this->directed_by = $_directed_by;
         $this->distributed_by = $_distributed_by;
@@ -44,5 +44,6 @@ var_dump($life_of_p);
 $the_shining = new Movie("The Shining", "Stanley Kubrick", "Warner Bros.");
 $the_shining->setCollection(1980);
 var_dump($the_shining);
+
 ?>
 
