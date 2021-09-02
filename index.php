@@ -25,7 +25,7 @@ class Movie {
     public function setCollection($release_year){
         if ($release_year < 2000) {
             $this->collection = "Classics";
-        } else if ($release_year <= 2000 && $release_year < 2021){
+        } else if ($release_year >= 2000 && $release_year < 2021){
             $this->collection = "Standard Collection";
         } else {
             $this->collection = "Newly Released";
@@ -39,11 +39,67 @@ class Movie {
 
 $life_of_p = new Movie("Life of P", "Ang Lee", "20th Century Fox");
 $life_of_p->setCollection(2012);
-var_dump($life_of_p);
 
 $the_shining = new Movie("The Shining", "Stanley Kubrick", "Warner Bros.");
 $the_shining->setCollection(1980);
-var_dump($the_shining);
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            padding: 100px;
+        }
+        li {
+                padding:10px;
+            }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+        <h2 style="display: inline"><?php echo($life_of_p->title . " :")?> </h2>
+
+        <ul>
+                <li>
+                    <strong>Directed By:</strong> <?php echo($life_of_p->directed_by)?>
+                </li>
+
+                <li>
+                    <strong>Distributed By:</strong> <?php echo($life_of_p->distributed_by)?>
+                </li>
+
+                <li>
+                <strong>Category:</strong> <?php echo($life_of_p->collection)?>
+                </li>
+
+            </ul>
+        </li>
+
+        <li>
+        <h2 style="display: inline"><?php echo($the_shining->title . " :")?> </h2>
+
+        <ul>
+                <li>
+                    <strong>Directed By:</strong> <?php echo($the_shining->directed_by)?>
+                </li>
+
+                <li>
+                    <strong>Distributed By:</strong> <?php echo($the_shining->distributed_by)?>
+                </li>
+
+                <li>
+                <strong>Category:</strong> <?php echo($the_shining->collection)?>
+                </li>
+
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
